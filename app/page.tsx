@@ -1,13 +1,13 @@
-import { TAGLINE, WORDMARK } from "@/lib/content";
+import { Features } from "@/app/components/landing/Features";
+import { Hero } from "@/app/components/landing/Hero";
+import { Pricing } from "@/app/components/landing/Pricing";
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <main className="shell">
-      <div className="atmosphere" aria-hidden="true" />
-      <div className="content">
-        <h1 className="wordmark">{WORDMARK}</h1>
-        <p className="tagline">{TAGLINE}</p>
-      </div>
+    <main className="relative w-full">
+      <Hero />
+      <Features />
+      <Pricing />
     </main>
   );
 }
