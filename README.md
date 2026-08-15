@@ -1,13 +1,13 @@
 # use4ever.com
 
-Marketing landing for **4ever** — a cápsula do tempo de memórias.
+Public marketing site for **use4ever** — the Jan 2025 landing page (hero, features, pricing, manifesto, termos, privacidade).
 
-This repo is the public website only. The product app lives separately (Expo).
+This repo is the public website only. The product app lives separately. There is **no Supabase**, waitlist backend, or CMS.
 
 ## Deploy on Vercel
 
 1. Import this repository on [Vercel](https://vercel.com/new).
-2. Leave environment variables empty — `/` requires **zero** env vars.
+2. Leave environment variables empty — the site requires **zero** env vars.
 3. Deploy with the default Next.js settings (Framework Preset: Next.js, Root Directory: `.`).
 4. Attach custom domains:
    - `use4ever.com`
@@ -31,6 +31,6 @@ npm test        # unit tests
 
 ## Stack
 
-- Next.js (App Router)
+- Next.js (App Router) + Tailwind CSS
 - TypeScript
-- No backend, waitlist, or CMS
+- Static waitlist pages (`/cadastro`, `/login`) via `mailto:contato@use4ever.com`
