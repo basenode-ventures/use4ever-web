@@ -19,7 +19,7 @@ export function Pricing() {
           </p>
         </div>
 
-        <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 gap-8 md:max-w-none md:grid-cols-2 md:gap-12">
+        <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3 lg:gap-8">
           {PLANS.map((plan) => (
             <div
               key={plan.name}
@@ -43,9 +43,11 @@ export function Pricing() {
                   <span className="text-4xl font-bold tracking-tight text-gray-900">
                     {plan.price}
                   </span>
-                  <span className="text-sm font-semibold leading-6 text-gray-600">
-                    {plan.period}
-                  </span>
+                  {plan.period ? (
+                    <span className="text-sm font-semibold leading-6 text-gray-600">
+                      {plan.period}
+                    </span>
+                  ) : null}
                 </p>
                 <ul className="mt-8 space-y-3 text-sm leading-6 text-gray-600">
                   {plan.features.map((feature) => (

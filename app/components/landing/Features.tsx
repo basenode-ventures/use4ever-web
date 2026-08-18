@@ -1,7 +1,7 @@
 import { FEATURES, FEATURES_SECTION } from "@/lib/content";
-import { Bell, Image as ImageIcon, Shield, Users } from "lucide-react";
+import { CalendarClock, Heart, UserRound, Video } from "lucide-react";
 
-const icons = [Shield, Users, ImageIcon, Bell] as const;
+const icons = [Video, CalendarClock, UserRound, Heart] as const;
 
 export function Features() {
   return (

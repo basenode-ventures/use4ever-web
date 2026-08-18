@@ -12,33 +12,31 @@ export default function ManifestoPage() {
           <h1 className="text-4xl font-bold">Nosso Manifesto</h1>
 
           <p className="text-4xl">
-            Vivemos em uma era onde tudo é efêmero. Mensagens são apagadas automaticamente, fotos
-            são perdidas em feeds infinitos, e momentos importantes se perdem em meio ao ruído das
-            redes sociais. A realidade é que a vida é{" "}
-            <span className="bg-primary px-2 text-white">breve</span> e nosso tempo com quem amamos
-            é <span className="bg-primary px-2 text-white">finito</span>.
+            Algumas memórias não cabem em um feed. Elas pedem silêncio, intenção e um{" "}
+            <span className="bg-primary px-2 text-white">momento certo</span> para chegar — hoje,
+            daqui a anos, ou quando não estivermos mais aqui.
           </p>
 
           <p className="text-4xl">
-            Estudos mostram que revisitar memórias fortalece laços familiares e contribui para o
-            bem-estar emocional. Não se trata apenas de nostalgia - é sobre construir um{" "}
-            <span className="bg-primary px-2 text-white">legado digital</span> significativo para
-            nossa família.
+            O use4ever é uma{" "}
+            <span className="bg-primary px-2 text-white">cápsula do tempo</span> de memórias
+            afetivas. Você grava um vídeo, um áudio, escreve uma carta ou deixa uma foto — e
+            escolhe{" "}
+            <span className="bg-primary px-2 text-white">quando</span> e{" "}
+            <span className="bg-primary px-2 text-white">para quem</span> aquela memória será
+            revelada.
           </p>
 
           <p className="text-4xl">
-            O use4ever nasceu dessa necessidade{" "}
-            <span className="bg-primary px-2 text-white">fundamental</span>: criar um espaço
-            dedicado e permanente para preservar o que realmente importa. Um lugar onde cada foto,
-            vídeo e mensagem é armazenado com propósito, acessível apenas para as pessoas certas, e
-            preservado para as próximas gerações.
+            Pode ser agora. Em uma data. Todo ano. Depois da morte. Com um atraso póstumo. Ou
+            quando a pessoa atingir certa idade. A ideia é simples: o que importa não some no
+            ruído — espera o seu tempo.
           </p>
 
           <p className="text-4xl">
-            Não podemos parar o tempo, mas podemos garantir que nossas{" "}
-            <span className="bg-primary px-2 text-white">memórias</span> e{" "}
-            <span className="bg-primary px-2 text-white">histórias</span> sejam preservadas. De
-            forma segura, privada e permanente.
+            Ainda estamos construindo. Este site é a lista de espera. Se a proposta fizer sentido
+            para você, deixe seu contato. Queremos cuidar disso com a seriedade que{" "}
+            <span className="bg-primary px-2 text-white">memórias</span> merecem.
           </p>
         </div>
       </div>

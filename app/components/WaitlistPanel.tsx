@@ -27,8 +27,8 @@ export function WaitlistPanel({
 
         <div className="space-y-4 rounded-2xl border border-gray-200 bg-white p-6 text-center">
           <p className="text-sm leading-6 text-gray-600">
-            Estamos em lista de espera. Ainda não há cadastro ou login com backend — envie um
-            e-mail e entraremos em contato.
+            Estamos em lista de espera. Ainda não há app, contas nem cobrança — envie um e-mail e
+            entraremos em contato.
           </p>
           <Button asChild className="w-full rounded-full">
             <a href={`mailto:${CONTACT_EMAIL}?subject=Lista%20de%20espera%20use4ever`}>

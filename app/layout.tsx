@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Button } from "@/components/ui/button";
-import { SITE_DESCRIPTION, SITE_URL, WORDMARK } from "@/lib/content";
+import { SITE_DESCRIPTION, SITE_URL, TAGLINE, WORDMARK } from "@/lib/content";
 import { Geist, Montserrat } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
@@ -19,7 +19,7 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${WORDMARK} — Compartilhe momentos com quem você ama`,
+    default: `${WORDMARK} — ${TAGLINE}`,
     template: `%s · ${WORDMARK}`,
   },
   description: SITE_DESCRIPTION,
@@ -76,14 +76,8 @@ export default function RootLayout({
                   {WORDMARK}
                 </Link>
                 <div className="flex items-center gap-x-6">
-                  <Link
-                    href="/login"
-                    className="text-sm font-semibold leading-6 text-gray-900"
-                  >
-                    Entrar
-                  </Link>
                   <Button asChild size="lg" className="rounded-full bg-red-500 hover:bg-red-600">
-                    <Link href="/cadastro">Começar agora</Link>
+                    <Link href="/cadastro">Lista de espera</Link>
                   </Button>
                 </div>
               </div>
@@ -105,7 +99,7 @@ export default function RootLayout({
                   </Link>
                 </div>
                 <p className="text-xs text-gray-400">
-                  © 2024 use4ever. Todos os direitos reservados.
+                  © 2026 use4ever. Todos os direitos reservados.
                 </p>
               </div>
             </footer>
