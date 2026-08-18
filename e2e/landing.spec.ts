@@ -9,8 +9,8 @@ test("home shows the time-capsule marketing LP with no env vars", async ({ page 
     page.getByRole("heading", { level: 1, name: /Suas memórias,/ }),
   ).toBeVisible();
   await expect(page.getByText("para sempre.")).toBeVisible();
-  await expect(page.getByRole("link", { name: "Entrar na lista de espera" })).toBeVisible();
-  await expect(page.getByText("A cápsula")).toBeVisible();
+  await expect(page.getByRole("link", { name: "Entrar na lista de espera" }).first()).toBeVisible();
+  await expect(page.getByRole("heading", { name: "A cápsula" })).toBeVisible();
   await expect(page.getByText("R$ 19,90")).toBeVisible();
   await expect(page.getByText("R$ 39,90")).toBeVisible();
   await expect(page.getByText("Popular")).toBeVisible();
