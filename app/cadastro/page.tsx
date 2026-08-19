@@ -9,10 +9,10 @@ export default function CadastroPage() {
   return (
     <WaitlistPanel
       title="Lista de espera"
-      description="Seja um dos primeiros a compartilhar momentos com sua família"
-      alternateHref="/login"
-      alternateLabel="Entrar"
-      alternatePrompt="Já tem uma conta?"
+      description="Quer ser avisado quando a cápsula do tempo estiver pronta? Escreva para nós."
+      alternateHref="/manifesto"
+      alternateLabel="Ler o manifesto"
+      alternatePrompt="Quer conhecer a ideia?"
     />
   );
 }

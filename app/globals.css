@@ -4,26 +4,36 @@
 
 @layer base {
   :root {
+    --verdigris: #2f4038;
+    --verdigris-deep: #24332d;
+    --paper: #ffffff;
+    --ink: #1c1916;
+    --brass: #c6a46a;
+    --wax: #7a1f2b;
+    --mist: #6b756f;
+    --emulsion: #141210;
+    --fog: #5c635f;
+
     --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    --foreground: 30 10% 10%;
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    --card-foreground: 30 10% 10%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 85.7% 60%;
+    --popover-foreground: 30 10% 10%;
+    --primary: 150 16% 22%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-    --radius: 0.5rem;
+    --secondary: 40 20% 96%;
+    --secondary-foreground: 30 10% 10%;
+    --muted: 40 16% 96%;
+    --muted-foreground: 150 6% 38%;
+    --accent: 150 16% 22%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 351 60% 30%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 150 8% 88%;
+    --input: 150 8% 88%;
+    --ring: 150 16% 22%;
+    --radius: 0.2rem;
     color-scheme: light;
   }
 
@@ -31,24 +41,35 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    @apply bg-white font-body text-ink antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--verdigris);
+    outline-offset: 3px;
   }
 }
 
-@layer utilities {
-  .bg-grid-pattern {
-    background-size: 40px 40px;
-    background-image:
-      linear-gradient(to right, rgb(0 0 0 / 0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(0 0 0 / 0.05) 1px, transparent 1px);
+@layer components {
+  .mark-word {
+    @apply italic text-verdigris;
+    font-family: var(--font-display), ui-serif, Georgia, serif;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-memory-pulse {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-rise,
+  .animate-develop,
+  .animate-fan {
     animation: none !important;
   }
 }

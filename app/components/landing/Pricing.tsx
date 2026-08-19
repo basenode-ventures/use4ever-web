@@ -1,72 +1,85 @@
-import { Button } from "@/components/ui/button";
 import { PLANS, PRICING_SECTION } from "@/lib/content";
-import { Check } from "lucide-react";
 import Link from "next/link";
 
 export function Pricing() {
   return (
-    <section id="pricing" className="bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl sm:text-center">
-          <h2 className="text-base font-semibold leading-7 text-primary">
+    <section id="pricing" className="border-t border-verdigris/10">
+      <div className="mx-auto max-w-6xl px-6 py-24 lg:py-32">
+        <div className="max-w-2xl">
+          <h2 className="font-mono text-[11px] uppercase tracking-[0.28em] text-verdigris">
             {PRICING_SECTION.eyebrow}
           </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <p className="mt-4 font-display text-4xl leading-tight text-ink sm:text-5xl">
             {PRICING_SECTION.title}
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-6 max-w-lg text-base leading-relaxed text-fog">
             {PRICING_SECTION.subtitle}
           </p>
         </div>
 
-        <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 gap-8 md:max-w-none md:grid-cols-2 md:gap-12">
+        <div className="mt-16 grid gap-4 lg:grid-cols-3">
           {PLANS.map((plan) => (
-            <div
+            <article
               key={plan.name}
-              className={`flex flex-col justify-between rounded-3xl bg-white p-8 ring-1 ring-gray-200 xl:p-10 ${
-                plan.featured ? "ring-2 ring-red-500" : ""
+              className={`flex flex-col justify-between p-8 ${
+                plan.featured
+                  ? "bg-verdigris text-white lg:-translate-y-3"
+                  : "border border-verdigris/15 bg-white text-ink"
               }`}
             >
               <div>
-                <div className="flex items-center justify-between gap-x-4">
-                  <h3 className="text-lg font-semibold leading-8 text-gray-900">
-                    {plan.name}
-                  </h3>
-                  {plan.featured && (
-                    <span className="rounded-full bg-primary/10 px-2.5 py-1 text-xs font-semibold leading-5 text-primary">
+                <div className="flex items-center justify-between gap-3">
+                  <h3 className="font-display text-2xl">{plan.name}</h3>
+                  {plan.featured ? (
+                    <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-white/70">
                       Popular
                     </span>
-                  )}
+                  ) : null}
                 </div>
-                <p className="mt-4 text-sm leading-6 text-gray-600">{plan.description}</p>
-                <p className="mt-6 flex items-baseline gap-x-1">
-                  <span className="text-4xl font-bold tracking-tight text-gray-900">
-                    {plan.price}
-                  </span>
-                  <span className="text-sm font-semibold leading-6 text-gray-600">
-                    {plan.period}
-                  </span>
+                <p
+                  className={`mt-3 text-sm leading-relaxed ${
+                    plan.featured ? "text-white/75" : "text-fog"
+                  }`}
+                >
+                  {plan.description}
                 </p>
-                <ul className="mt-8 space-y-3 text-sm leading-6 text-gray-600">
+                <p className="mt-8 flex items-baseline gap-1">
+                  <span className="font-display text-4xl tracking-tight">{plan.price}</span>
+                  {plan.period ? (
+                    <span
+                      className={`font-mono text-[11px] ${
+                        plan.featured ? "text-white/55" : "text-mist"
+                      }`}
+                    >
+                      {plan.period}
+                    </span>
+                  ) : null}
+                </p>
+                <ul className="mt-8 space-y-2.5">
                   {plan.features.map((feature) => (
-                    <li key={feature} className="flex gap-x-3">
-                      <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
+                    <li key={feature} className="flex gap-3 text-sm leading-6">
+                      <span
+                        aria-hidden="true"
+                        className={plan.featured ? "text-white/70" : "text-verdigris"}
+                      >
+                        ▸
+                      </span>
                       {feature}
                     </li>
                   ))}
                 </ul>
               </div>
-              <Button
-                asChild
-                className={`mt-8 rounded-full ${
+              <Link
+                href="/cadastro"
+                className={`mt-10 block px-5 py-3 text-center font-mono text-[11px] uppercase tracking-[0.16em] transition-colors ${
                   plan.featured
-                    ? "bg-primary hover:bg-primary/90"
-                    : "bg-primary/10 text-primary hover:bg-primary/20"
+                    ? "bg-white text-verdigris hover:bg-white/90"
+                    : "bg-verdigris text-white hover:bg-verdigris-deep"
                 }`}
               >
-                <Link href="/cadastro">{plan.cta}</Link>
-              </Button>
-            </div>
+                {plan.cta}
+              </Link>
+            </article>
           ))}
         </div>
       </div>

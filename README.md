@@ -1,8 +1,8 @@
 # use4ever.com
 
-Public marketing site for **use4ever** — the Jan 2025 landing page (hero, features, pricing, manifesto, termos, privacidade).
+Public marketing site for **use4ever** — a time capsule of affective memories (*Suas memórias, para sempre.*).
 
-This repo is the public website only. The product app lives separately. There is **no Supabase**, waitlist backend, or CMS.
+This repo is the public waitlist / pitch website only. The product app lives separately. There is **no** backend, billing, vault delivery, or CMS here.
 
 ## Deploy on Vercel
 
@@ -27,6 +27,7 @@ Open [http://localhost:3000](http://localhost:3000).
 ```bash
 npm run build   # production build
 npm test        # unit tests
+npm run test:e2e
 ```
 
 ## Stack

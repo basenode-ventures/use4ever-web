@@ -1,25 +1,32 @@
 import type { Metadata, Viewport } from "next";
-import { Button } from "@/components/ui/button";
-import { SITE_DESCRIPTION, SITE_URL, WORDMARK } from "@/lib/content";
-import { Geist, Montserrat } from "next/font/google";
+import { SITE_DESCRIPTION, SITE_URL, TAGLINE, WORDMARK } from "@/lib/content";
+import { Fraunces, IBM_Plex_Mono, Sora } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 
-const geistSans = Geist({
-  display: "swap",
+const display = Fraunces({
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-display",
 });
 
-const montserrat = Montserrat({
+const body = Sora({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-montserrat",
+  variable: "--font-body",
+});
+
+const mono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${WORDMARK} — Compartilhe momentos com quem você ama`,
+    default: `${WORDMARK} — ${TAGLINE}`,
     template: `%s · ${WORDMARK}`,
   },
   description: SITE_DESCRIPTION,
@@ -61,55 +68,53 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${geistSans.className} ${montserrat.variable}`}
+      className={`${display.variable} ${body.variable} ${mono.variable}`}
       suppressHydrationWarning
     >
-      <body className="bg-background text-foreground">
-        <div className="flex min-h-screen flex-col items-center">
-          <div className="flex w-full flex-1 flex-col items-center gap-20">
-            <nav className="flex h-16 w-full justify-center border-b border-b-foreground/10">
-              <div className="flex w-full max-w-7xl items-center justify-between p-3 px-5">
-                <Link
-                  href="/"
-                  className="font-montserrat text-2xl font-semibold text-primary"
-                >
-                  {WORDMARK}
-                </Link>
-                <div className="flex items-center gap-x-6">
-                  <Link
-                    href="/login"
-                    className="text-sm font-semibold leading-6 text-gray-900"
-                  >
-                    Entrar
-                  </Link>
-                  <Button asChild size="lg" className="rounded-full bg-red-500 hover:bg-red-600">
-                    <Link href="/cadastro">Começar agora</Link>
-                  </Button>
-                </div>
-              </div>
+      <body className="min-h-screen bg-white font-body text-ink">
+        <div className="flex min-h-screen flex-col">
+          <header className="sticky top-0 z-40 border-b border-verdigris/10 bg-white/85 backdrop-blur-md">
+            <nav className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
+              <Link
+                href="/"
+                className="font-display text-2xl font-medium tracking-tight text-ink"
+              >
+                use<span className="text-verdigris">4</span>ever
+              </Link>
+              <Link
+                href="/cadastro"
+                className="bg-verdigris px-4 py-2 font-mono text-[11px] uppercase tracking-[0.18em] text-white transition-colors hover:bg-verdigris-deep"
+              >
+                Lista de espera
+              </Link>
             </nav>
+          </header>
 
-            {children}
+          <div className="flex-1">{children}</div>
 
-            <footer className="w-full border-t bg-white py-8">
-              <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-6">
-                <div className="flex items-center gap-8 text-sm text-gray-500">
-                  <Link href="/manifesto" className="hover:text-gray-900">
+          <footer className="border-t border-verdigris/10">
+            <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-10 sm:flex-row sm:items-end sm:justify-between">
+              <p className="font-display text-3xl text-ink">
+                use<span className="text-verdigris">4</span>ever
+              </p>
+              <div className="flex flex-col gap-4 sm:items-end">
+                <div className="flex gap-6 font-mono text-[11px] uppercase tracking-[0.16em] text-mist">
+                  <Link href="/manifesto" className="hover:text-verdigris">
                     Sobre
                   </Link>
-                  <Link href="/privacidade" className="hover:text-gray-900">
+                  <Link href="/privacidade" className="hover:text-verdigris">
                     Privacidade
                   </Link>
-                  <Link href="/termos" className="hover:text-gray-900">
+                  <Link href="/termos" className="hover:text-verdigris">
                     Termos
                   </Link>
                 </div>
-                <p className="text-xs text-gray-400">
-                  © 2024 use4ever. Todos os direitos reservados.
+                <p className="font-mono text-[11px] text-mist/80">
+                  © 2026 use4ever. Todos os direitos reservados.
                 </p>
               </div>
-            </footer>
-          </div>
+            </div>
+          </footer>
         </div>
       </body>
     </html>

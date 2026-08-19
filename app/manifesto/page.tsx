@@ -1,3 +1,4 @@
+import { PageSheet } from "@/app/components/PageSheet";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,42 +7,37 @@ export const metadata: Metadata = {
 
 export default function ManifestoPage() {
   return (
-    <div className="min-h-[80vh] bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-5xl px-6 lg:px-8">
-        <div className="space-y-8 text-xl leading-relaxed">
-          <h1 className="text-4xl font-bold">Nosso Manifesto</h1>
+    <PageSheet width="wide">
+      <div className="space-y-10">
+        <h1 className="font-display text-5xl leading-none sm:text-6xl">Nosso Manifesto</h1>
 
-          <p className="text-4xl">
-            Vivemos em uma era onde tudo é efêmero. Mensagens são apagadas automaticamente, fotos
-            são perdidas em feeds infinitos, e momentos importantes se perdem em meio ao ruído das
-            redes sociais. A realidade é que a vida é{" "}
-            <span className="bg-primary px-2 text-white">breve</span> e nosso tempo com quem amamos
-            é <span className="bg-primary px-2 text-white">finito</span>.
+        <div className="space-y-8 font-display text-2xl leading-snug sm:text-3xl">
+          <p>
+            Algumas memórias não cabem em um feed. Elas pedem silêncio, intenção e um{" "}
+            <span className="mark-word">momento certo</span> para chegar — hoje, daqui a anos, ou
+            quando não estivermos mais aqui.
           </p>
 
-          <p className="text-4xl">
-            Estudos mostram que revisitar memórias fortalece laços familiares e contribui para o
-            bem-estar emocional. Não se trata apenas de nostalgia - é sobre construir um{" "}
-            <span className="bg-primary px-2 text-white">legado digital</span> significativo para
-            nossa família.
+          <p>
+            O use4ever é uma <span className="mark-word">cápsula do tempo</span> de memórias
+            afetivas. Você grava um vídeo, um áudio, escreve uma carta ou deixa uma foto — e
+            escolhe <span className="mark-word">quando</span> e{" "}
+            <span className="mark-word">para quem</span> aquela memória será revelada.
           </p>
 
-          <p className="text-4xl">
-            O use4ever nasceu dessa necessidade{" "}
-            <span className="bg-primary px-2 text-white">fundamental</span>: criar um espaço
-            dedicado e permanente para preservar o que realmente importa. Um lugar onde cada foto,
-            vídeo e mensagem é armazenado com propósito, acessível apenas para as pessoas certas, e
-            preservado para as próximas gerações.
+          <p>
+            Pode ser agora. Em uma data. Todo ano. Depois da morte. Com um atraso póstumo. Ou
+            quando a pessoa atingir certa idade. A ideia é simples: o que importa não some no
+            ruído — espera o seu tempo.
           </p>
 
-          <p className="text-4xl">
-            Não podemos parar o tempo, mas podemos garantir que nossas{" "}
-            <span className="bg-primary px-2 text-white">memórias</span> e{" "}
-            <span className="bg-primary px-2 text-white">histórias</span> sejam preservadas. De
-            forma segura, privada e permanente.
+          <p>
+            Ainda estamos construindo. Este site é a lista de espera. Se a proposta fizer sentido
+            para você, deixe seu contato. Queremos cuidar disso com a seriedade que{" "}
+            <span className="mark-word">memórias</span> merecem.
           </p>
         </div>
       </div>
-    </div>
+    </PageSheet>
   );
 }
