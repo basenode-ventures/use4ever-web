@@ -1,3 +1,4 @@
+import { PageSheet } from "@/app/components/PageSheet";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,16 +7,17 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-[80vh] bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-3xl px-6 lg:px-8">
-        <div className="space-y-12">
+    <PageSheet>
+        <div className="space-y-12 text-sm leading-7 text-ink/80">
           <div>
-            <h1 className="mb-8 text-4xl font-bold">Política de Privacidade</h1>
-            <p className="mb-4 text-gray-600">Última atualização: Agosto 2026</p>
+            <h1 className="mb-4 font-display text-4xl text-ink">Política de Privacidade</h1>
+            <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink/45">
+              Última atualização: Agosto 2026
+            </p>
           </div>
 
           <section className="space-y-6">
-            <h2 className="text-2xl font-semibold">1. Escopo</h2>
+            <h2 className="font-display text-2xl text-ink">1. Escopo</h2>
             <p>
               Esta política cobre o site use4ever.com e a lista de espera por e-mail. Ainda não há
               cadastro, login, armazenamento de memórias nem cobrança neste domínio. Quando o
@@ -24,7 +26,7 @@ export default function PrivacyPage() {
           </section>
 
           <section className="space-y-6">
-            <h2 className="text-2xl font-semibold">2. Dados que podemos receber</h2>
+            <h2 className="font-display text-2xl text-ink">2. Dados que podemos receber</h2>
             <div className="space-y-4">
               <p>Hoje, o canal principal é o e-mail. Podemos receber:</p>
               <ul className="list-disc space-y-2 pl-6">
@@ -38,7 +40,7 @@ export default function PrivacyPage() {
           </section>
 
           <section className="space-y-6">
-            <h2 className="text-2xl font-semibold">3. Como usamos</h2>
+            <h2 className="font-display text-2xl text-ink">3. Como usamos</h2>
             <div className="space-y-4">
               <p>Usamos o que você envia para:</p>
               <ul className="list-disc space-y-2 pl-6">
@@ -50,7 +52,7 @@ export default function PrivacyPage() {
           </section>
 
           <section className="space-y-6">
-            <h2 className="text-2xl font-semibold">4. Compartilhamento</h2>
+            <h2 className="font-display text-2xl text-ink">4. Compartilhamento</h2>
             <p>
               Não vendemos seus dados. Só compartilhamos o necessário com provedores que fazem o
               site ou o e-mail funcionarem (por exemplo, hospedagem). Não reivindicamos criptografia
@@ -59,7 +61,7 @@ export default function PrivacyPage() {
           </section>
 
           <section className="space-y-6">
-            <h2 className="text-2xl font-semibold">5. Seus direitos</h2>
+            <h2 className="font-display text-2xl text-ink">5. Seus direitos</h2>
             <div className="space-y-4">
               <p>Você pode:</p>
               <ul className="list-disc space-y-2 pl-6">
@@ -71,13 +73,12 @@ export default function PrivacyPage() {
           </section>
 
           <section className="space-y-6">
-            <h2 className="text-2xl font-semibold">6. Contato</h2>
+            <h2 className="font-display text-2xl text-ink">6. Contato</h2>
             <p>
               Privacidade: contato@use4ever.com
             </p>
           </section>
         </div>
-      </div>
-    </div>
+    </PageSheet>
   );
 }

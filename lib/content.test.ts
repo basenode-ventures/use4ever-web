@@ -4,6 +4,7 @@ import {
   FEATURES,
   HERO,
   PLANS,
+  REVEAL_MOMENTS,
   SITE_DESCRIPTION,
   SITE_URL,
   TAGLINE,
@@ -34,6 +35,12 @@ describe("marketing copy", () => {
       "Intenção além da vida",
     ]);
     expect(FEATURES.some((f) => /morte|póstum/i.test(f.description))).toBe(true);
+    expect(REVEAL_MOMENTS.map((m) => m.when)).toEqual([
+      "Agora",
+      "Em uma data",
+      "Todo ano",
+      "Depois",
+    ]);
   });
 
   it("shows Essencial, Eterno and Família as intended plans", () => {

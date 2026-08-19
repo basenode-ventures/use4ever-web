@@ -21,6 +21,13 @@ export const FEATURES_SECTION = {
     "O use4ever é pensado para guardar o que importa e revelá-lo no momento certo — hoje, em uma data, todo ano, ou depois.",
 } as const;
 
+export const REVEAL_MOMENTS = [
+  { when: "Agora", note: "Chega hoje" },
+  { when: "Em uma data", note: "Espera o dia" },
+  { when: "Todo ano", note: "Volta no mesmo dia" },
+  { when: "Depois", note: "Quando você não estiver" },
+] as const;
+
 export const FEATURES = [
   {
     name: "O que você guarda",
