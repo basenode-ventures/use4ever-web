@@ -5,7 +5,7 @@ import Link from "next/link";
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="mx-auto grid max-w-6xl items-end gap-16 px-6 pb-24 pt-16 lg:grid-cols-[minmax(0,1.15fr)_minmax(240px,0.7fr)] lg:gap-20 lg:pb-32 lg:pt-24">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-20 pt-14 lg:grid-cols-[minmax(0,1.2fr)_minmax(260px,0.72fr)] lg:gap-16 lg:pb-28 lg:pt-20">
         <div>
           <p className="animate-rise font-mono text-[11px] uppercase tracking-[0.28em] text-brass">
             Cápsula de memórias afetivas
