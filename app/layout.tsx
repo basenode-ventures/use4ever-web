@@ -54,8 +54,8 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#2F4038",
-  colorScheme: "dark",
+  themeColor: "#ffffff",
+  colorScheme: "light",
   width: "device-width",
   initialScale: 1,
 };
@@ -71,19 +71,19 @@ export default function RootLayout({
       className={`${display.variable} ${body.variable} ${mono.variable}`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen bg-verdigris font-body text-paper">
+      <body className="min-h-screen bg-white font-body text-ink">
         <div className="flex min-h-screen flex-col">
-          <header className="sticky top-0 z-40 border-b border-paper/10 bg-verdigris/80 backdrop-blur-md">
+          <header className="sticky top-0 z-40 border-b border-verdigris/10 bg-white/85 backdrop-blur-md">
             <nav className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
               <Link
                 href="/"
-                className="font-display text-2xl font-medium tracking-tight text-paper"
+                className="font-display text-2xl font-medium tracking-tight text-ink"
               >
-                use<span className="text-brass">4</span>ever
+                use<span className="text-verdigris">4</span>ever
               </Link>
               <Link
                 href="/cadastro"
-                className="border border-brass/50 bg-brass/10 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.18em] text-paper transition-colors hover:bg-brass hover:text-ink"
+                className="bg-verdigris px-4 py-2 font-mono text-[11px] uppercase tracking-[0.18em] text-white transition-colors hover:bg-verdigris-deep"
               >
                 Lista de espera
               </Link>
@@ -92,24 +92,24 @@ export default function RootLayout({
 
           <div className="flex-1">{children}</div>
 
-          <footer className="border-t border-paper/10">
+          <footer className="border-t border-verdigris/10">
             <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-10 sm:flex-row sm:items-end sm:justify-between">
-              <p className="font-display text-3xl text-paper/80">
-                use<span className="text-brass">4</span>ever
+              <p className="font-display text-3xl text-ink">
+                use<span className="text-verdigris">4</span>ever
               </p>
               <div className="flex flex-col gap-4 sm:items-end">
                 <div className="flex gap-6 font-mono text-[11px] uppercase tracking-[0.16em] text-mist">
-                  <Link href="/manifesto" className="hover:text-paper">
+                  <Link href="/manifesto" className="hover:text-verdigris">
                     Sobre
                   </Link>
-                  <Link href="/privacidade" className="hover:text-paper">
+                  <Link href="/privacidade" className="hover:text-verdigris">
                     Privacidade
                   </Link>
-                  <Link href="/termos" className="hover:text-paper">
+                  <Link href="/termos" className="hover:text-verdigris">
                     Termos
                   </Link>
                 </div>
-                <p className="font-mono text-[11px] text-mist/70">
+                <p className="font-mono text-[11px] text-mist/80">
                   © 2026 use4ever. Todos os direitos reservados.
                 </p>
               </div>

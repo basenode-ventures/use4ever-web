@@ -6,35 +6,35 @@
   :root {
     --verdigris: #2f4038;
     --verdigris-deep: #24332d;
-    --paper: #ede6d4;
+    --paper: #ffffff;
     --ink: #1c1916;
     --brass: #c6a46a;
     --wax: #7a1f2b;
-    --mist: #a8b5a8;
+    --mist: #6b756f;
     --emulsion: #141210;
-    --fog: #c5c0b2;
+    --fog: #5c635f;
 
-    --background: 150 16% 22%;
-    --foreground: 42 28% 88%;
-    --card: 42 33% 88%;
+    --background: 0 0% 100%;
+    --foreground: 30 10% 10%;
+    --card: 0 0% 100%;
     --card-foreground: 30 10% 10%;
-    --popover: 42 33% 88%;
+    --popover: 0 0% 100%;
     --popover-foreground: 30 10% 10%;
-    --primary: 351 60% 30%;
-    --primary-foreground: 42 33% 88%;
-    --secondary: 150 16% 18%;
-    --secondary-foreground: 42 28% 88%;
-    --muted: 150 12% 28%;
-    --muted-foreground: 130 10% 68%;
-    --accent: 39 42% 60%;
-    --accent-foreground: 30 10% 10%;
+    --primary: 150 16% 22%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 20% 96%;
+    --secondary-foreground: 30 10% 10%;
+    --muted: 40 16% 96%;
+    --muted-foreground: 150 6% 38%;
+    --accent: 150 16% 22%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 351 60% 30%;
-    --destructive-foreground: 42 33% 88%;
-    --border: 130 10% 38%;
-    --input: 130 10% 38%;
-    --ring: 39 42% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 150 8% 88%;
+    --input: 150 8% 88%;
+    --ring: 150 16% 22%;
     --radius: 0.2rem;
-    color-scheme: dark;
+    color-scheme: light;
   }
 
   * {
@@ -46,42 +46,19 @@
   }
 
   body {
-    @apply bg-verdigris font-body text-paper antialiased;
-    background-image:
-      radial-gradient(1200px 700px at 12% -10%, rgb(198 164 106 / 0.09), transparent 50%),
-      radial-gradient(900px 600px at 100% 10%, rgb(122 31 43 / 0.12), transparent 46%);
-  }
-
-  body::after {
-    content: "";
-    pointer-events: none;
-    position: fixed;
-    inset: 0;
-    z-index: 80;
-    opacity: 0.07;
-    mix-blend-mode: overlay;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    @apply bg-white font-body text-ink antialiased;
   }
 
   :focus-visible {
-    outline: 2px solid var(--brass);
+    outline: 2px solid var(--verdigris);
     outline-offset: 3px;
   }
 }
 
 @layer components {
   .mark-word {
-    @apply italic text-brass;
+    @apply italic text-verdigris;
     font-family: var(--font-display), ui-serif, Georgia, serif;
-  }
-}
-
-@layer utilities {
-  .film-sprockets {
-    background-image: radial-gradient(circle at 50% 50%, var(--paper) 0 38%, transparent 40%);
-    background-size: 100% 14px;
-    background-repeat: repeat-y;
-    opacity: 0.28;
   }
 }
 
